@@ -1,0 +1,9 @@
+# Ignore everything...
+*
+# Except...
+!/img/
+!.gitignore
+!Makefile
+!*.md
+!template.latex
+!template.css
