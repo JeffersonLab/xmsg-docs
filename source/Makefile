@@ -1,4 +1,4 @@
-.PHONY: all clean pdf html
+.PHONY: all clean pdf html figs
 
 FILE := xmsg-java
 VERSION := 2.3
@@ -22,6 +22,8 @@ pdf: $(OUTPUT).pdf
 
 html: $(OUTPUT).html
 
+figs: $(PNGFIGS)
+
 
 $(OUTPUT).pdf: $(FILE).md $(PDFFIGS) $(TEXTMPL)
 	pandoc --template=$(TEXTMPL) $(TEXENGINE) $(TEXOPTIONS) -sS $< -o $@
@@ -34,7 +36,10 @@ $(FIGDIR)/%.pdf: $(FIGDIR)/%.md
 	pdfcrop $@ $@
 
 $(FIGDIR)/%.png: $(FIGDIR)/%.pdf
-	convert -density 300 -units PixelsPerInch -quality 100 $< $@
+	convert \
+	    -density 300 -units PixelsPerInch \
+	    -gravity center -extent 1100x110 -background none \
+	    -quality 100 $< $@
 
 clean:
 	rm -f $(OUTPUT).pdf $(OUTPUT).html *.log *.aux
