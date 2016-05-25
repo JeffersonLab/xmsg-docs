@@ -4,6 +4,7 @@
 !/img/
 !.gitignore
 !Makefile
+!*.rst
 !*.md
 !template.latex
 !template.css
