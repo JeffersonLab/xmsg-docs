@@ -2,10 +2,14 @@
 *
 # Except...
 !/img/
+!/_templates/
+!/_static/
 !.gitignore
 !Makefile
+!conf.py
+!layout.html
 !*.rst
 !*.md
-!template.latex
-!template.css
+!*.latex
+!*.css
 !*.png

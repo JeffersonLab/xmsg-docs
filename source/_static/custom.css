@@ -1,0 +1,8 @@
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+img.zmqmsg {
+    max-height: 35px;
+}

@@ -1,5 +1,1 @@
-# Ignore everything...
-*
-# Except...
-!/.gitignore
-!/source/
+build/
