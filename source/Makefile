@@ -21,7 +21,7 @@ TEXOPTIONS := --highlight-style=pygments --default-image-extension=pdf
 HTMLOPTIONS := --highlight-style=pygments --default-image-extension=png
 
 
-all: pdf html
+all: figs
 
 pdf: $(OUTPUT).pdf
 
