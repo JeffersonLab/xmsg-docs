@@ -42,15 +42,18 @@ $(OUTPUT).html: $(FILE).rst $(PNGFIGS) style.css
 	$< | pandoc -f rst $(METADATA) \
 	    --css style.css $(HTMLOPTIONS) --toc -sS -o $@
 
-$(FIGDIR)/%.pdf: $(FIGDIR)/%.md
+$(FIGDIR)/%.crop.pdf: $(FIGDIR)/%.md
 	pandoc --template=$(TEXTMPL) $(TEXENGINE) -sS $< -o $@
 	pdfcrop $@ $@
 
-$(FIGDIR)/%.png: $(FIGDIR)/%.pdf
+$(FIGDIR)/%.png: $(FIGDIR)/%.crop.pdf
 	convert \
 	    -density 300 -units PixelsPerInch \
 	    -gravity center -extent 1100x110 -background none \
 	    -quality 100 $< $@
+
+$(FIGDIR)/%.pdf: $(FIGDIR)/%.crop.pdf
+	cp $< $@
 
 clean:
 	rm -f $(OUTPUT).pdf $(OUTPUT).html *.log *.aux
