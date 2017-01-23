@@ -5,25 +5,17 @@ Under construction...
 
 ### Dependencies
 
-The xMsg documentation is generated using [Sphinx](http://sphinx-doc.org).
-Install it with:
+The xMsg documentation is generated using [Jekyll](http://jekyllrb.com/).
 
-    sudo pip install sphinx
-
-The Sphinx theme can be installed with:
-
-    sudo pip install sphinx-rtd-theme
-
-To generate a PDF version of the documentation, *LaTeX* is also required.
+Install [Docker](https://docs.docker.com/engine/installation/) to run
+the required Jekyll version inside a container.
 
 ### Generating the docs
 
-To generate the documentation, run:
+To generate the documentation, start the Jekyll server inside a Docker
+container:
 
-    make clean html
+    docker-compose up
 
-or
+The output files will be located in `_site`.
 
-    make clean latexpdf
-
-The output files will be located in `build/html` or `build/latex`.

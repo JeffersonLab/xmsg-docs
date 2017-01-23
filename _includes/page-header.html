@@ -1,0 +1,31 @@
+<nav id="main-navbar-wrapper">
+  <ul class="main-navbar" id="main-navbar-list">
+    <div class="float-left">
+      <li><a href="{{ site.baseurl }}/"><font face=myFont><b>xMsg</b></font></a></li>
+    </div>
+    <div class="float-right">
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/quickstart/">Quick Start</a></li>
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/tutorials/">Tutorials</a></li>
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/examples/">Examples</a></li>
+      <li class="doc-link"><a href="{{ site.baseurl }}/docs/reference.html">Reference</a></li>
+      <li class="mobile-icon">
+        <div class="icon-container" onclick="toogleNavbar()">
+          <div class="icon-bar"></div>
+          <div class="icon-bar"></div>
+          <div class="icon-bar"></div>
+        </div>
+      </li>
+    </div>
+  </ul>
+</nav>
+
+<script>
+function toogleNavbar() {
+  var x = document.getElementById("main-navbar-list");
+  if (x.className === "main-navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "main-navbar";
+  }
+}
+</script>

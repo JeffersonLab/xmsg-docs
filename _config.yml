@@ -1,0 +1,19 @@
+# Setup
+title:        xMsg
+tagline:      A lightweight, yet full featured publish/subscribe messaging system
+baseurl:      "/xmsg-docs"
+
+# About/contact
+author:
+  name:       Vardan Gyurjyan
+  url:        "https://JeffersonLab.github.io"
+
+# Main Docs
+include: ["_downloads", "docs"]
+exclude: ["build", "source", "Makefile", "README.md", "scripts", "Dockerfile", "docker-compose.yml"]
+
+# Others
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

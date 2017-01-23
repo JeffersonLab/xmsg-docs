@@ -1,0 +1,4 @@
+---
+layout: example
+title: Python
+---

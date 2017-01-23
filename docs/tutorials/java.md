@@ -1,4 +1,7 @@
-# xMsg Specification
+---
+layout: tutorial
+title: Java
+---
 
 ## Actors
 
@@ -72,7 +75,7 @@ All actors subscribed to the topic of a published message will receive it.
 
 A message is sent through the wire as a ZMQ message composed of three frames:
 
-![](img/raw-message.*)
+![]({{ site.baseurl }}/img/raw-message.png){: .align-center .zmqmsg }
 
 The **topic** frame is a 3-part string with the format:
 `<DOMAIN>:<SUBJECT>:<TYPE>`,
@@ -277,13 +280,13 @@ The three sockets will be connected to the proxy address using the TCP protocol.
 To check the connection, the `pubSocket` will publish a control message to the proxy,
 with the following format:
 
-![](img/ctrl-pub-req.*)
+![]({{ site.baseurl }}/img/ctrl-pub-req.png){: .align-center .zmqmsg }
 
 If the request was successfully published,
 the proxy will send to the `ctrlSocket` a message with this format
 (note that the first frame will be stripped):
 
-![](img/ctrl-pub-ack.*)
+![]({{ site.baseurl }}/img/ctrl-pub-ack.png){: .align-center .zmqmsg }
 
 If no response is received after 100 ms, the request will be published again.
 After 10 unsuccessful requests, an exception will be thrown
@@ -436,6 +439,8 @@ the following table shows which topics are matched:
 |`A:B:L`          |yes         |`E`              |no          |
 |`A:B:M`          |yes         |`M:R`            |no          |
 
+<p></p>
+
 <div class="admonition note">
 Regular expressions and wildcards are not supported. Only prefix matching.
 For example, trying to select just the subject of any domain, `*:B`,
@@ -465,12 +470,12 @@ In order to check that the subscription is running,
 the `pubSocket` will publish a control message to the proxy,
 with the following format:
 
-![](img/ctrl-sub-req.*)
+![]({{ site.baseurl }}/img/ctrl-sub-req.png){: .align-center .zmqmsg }
 
 If the request was successfully received,
 the proxy will publish back another control message, with this format:
 
-![](img/ctrl-sub-ack.*)
+![]({{ site.baseurl }}/img/ctrl-sub-ack.png){: .align-center .zmqmsg }
 
 This message should be received by the `subSocket` if everything is working.
 But if no message is received after 100 ms, the request will be published again.
