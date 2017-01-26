@@ -1,5 +1,6 @@
 ---
 layout: page
+use_nav: 1
 title: Reference
 ---
 

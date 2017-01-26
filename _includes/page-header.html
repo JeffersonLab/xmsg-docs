@@ -1,21 +1,9 @@
-<nav id="main-navbar-wrapper">
+<nav class="main-navbar-wrapper">
   <ul class="main-navbar" id="main-navbar-list">
     <div class="float-left">
       <li><a href="{{ site.baseurl }}/"><font face=myFont style="font-size: 1.5rem;"><b>xMsg</b></font></a></li>
     </div>
-    <div class="float-right">
-      <li class="doc-link"><a href="{{ site.baseurl }}/docs/quickstart/">Quick Start</a></li>
-      <li class="doc-link"><a href="{{ site.baseurl }}/docs/tutorials/">Tutorials</a></li>
-      <li class="doc-link"><a href="{{ site.baseurl }}/docs/examples/">Examples</a></li>
-      <li class="doc-link"><a href="{{ site.baseurl }}/docs/reference.html">Reference</a></li>
-      <li class="mobile-icon">
-        <div class="icon-container" onclick="toogleNavbar()">
-          <div class="icon-bar"></div>
-          <div class="icon-bar"></div>
-          <div class="icon-bar"></div>
-        </div>
-      </li>
-    </div>
+    {% include header-navbar.html %}
   </ul>
 </nav>
 

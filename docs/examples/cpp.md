@@ -1,4 +1,7 @@
 ---
-layout: example
+layout: doc_lang
+type: examples
+type_desc: Examples
+id: cpp
 title: C++
 ---

@@ -15,7 +15,7 @@ html {
   height: 100%;
 }
 a {
-  color: #827415;
+  color: #1e6bb8;
   text-decoration: none;
 }
 a:hover {
@@ -24,13 +24,14 @@ a:hover {
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  background-color: rgba(0, 0, 128, 0.6);
+  border-color: rgba(255, 255, 255, 0.5);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  min-width: 10rem;
 }
 .btn:hover {
   color: rgba(255, 255, 255, 0.8);
@@ -55,7 +56,9 @@ a:hover {
 @media screen and (max-width: 42em) {
   .btn {
     display: block;
-    width: 100%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0.75rem;
     font-size: 0.9rem;
   }
@@ -64,105 +67,165 @@ a:hover {
     margin-left: 0;
   }
 }
-
-
-#main-navbar-wrapper {
+#header-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  width: 100%;
+  z-index: 2;
+  margin: 0 auto;
+}
+.main-navbar-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   background-color: #159957;
-  background-image: linear-gradient(120deg, #610B0B, #AEB404);
+  background-image: linear-gradient(120deg, #155799, #159957);
   width: 100%;
   z-index: 2;
   box-shadow: 0px 1px 1px RGBA(4, 25, 54, 0.1);
   margin: 0 auto;
 }
-#main-navbar-wrapper ul {
+.main-navbar-wrapper ul {
   max-width: 82rem;
   margin: 0 auto 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
 }
-#main-navbar-wrapper ul li {
+.main-navbar-wrapper ul li {
   float: left;
 }
-#main-navbar-wrapper ul a {
+.main-navbar-wrapper ul a {
   text-decoration: none;
-  display: inline-block;
   padding: .9rem;
   font-family: 'Muli', sans-serif;
   color: #fff;
   line-height: 1.2rem;
   margin-bottom: -1px;
   box-shadow: 0;
+  display: inline-block;
 }
-#main-navbar-wrapper ul li a:hover,
-#main-navbar-wrapper ul li a:active {
+.main-navbar-wrapper ul li a:hover,
+.main-navbar-wrapper ul li a:active {
   text-decoration: none;
-  color: #FF945A;
+  color: #19CCAA;
 }
-#main-navbar-wrapper ul li.mobile-icon {
+.main-navbar-wrapper ul li.mobile-icon {
   display: none;
 }
-#main-navbar-wrapper .float-left {
+.main-navbar-wrapper .float-left {
   float:left;
 }
-#main-navbar-wrapper .float-right {
+.main-navbar-wrapper .float-right {
   float:right;
 }
-#main-navbar-wrapper .icon-container {
+.main-navbar-wrapper .icon-container {
   padding: 0.6rem 1rem 0.4rem;
   display: inline-block;
   cursor: pointer;
 }
-#main-navbar-wrapper .icon-bar {
+.main-navbar-wrapper .icon-bar {
   width: 1.6rem;
   height: .3rem;
   background-color: #fff;
   margin: .2rem 0;
 }
 @media screen and (max-width: 42em) {
-  #main-navbar-wrapper ul li.doc-link {
+  .main-navbar-wrapper ul li.doc-link {
     display: none;
   }
-  #main-navbar-wrapper ul li.mobile-icon {
+  .main-navbar-wrapper ul li.mobile-icon {
     float: right;
     display: inline-block;
   }
+  #header-navbar ul {
+    display: none;
+  }
 }
 @media screen and (max-width: 42em) {
-  #main-navbar-wrapper .float-left {
+  .main-navbar-wrapper .float-left {
     float: none;
   }
-  #main-navbar-wrapper .float-right {
+  .main-navbar-wrapper .float-right {
     float: none;
   }
-  #main-navbar-wrapper ul.responsive {
+  .main-navbar-wrapper ul.responsive {
     position: relative;
   }
-  #main-navbar-wrapper ul.responsive li.mobile-icon {
+  .main-navbar-wrapper ul.responsive li.mobile-icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  #main-navbar-wrapper ul.responsive li {
+  .main-navbar-wrapper ul.responsive li {
     float: none;
     display: inline;
   }
-  #main-navbar-wrapper ul.responsive li a {
+  .main-navbar-wrapper ul.responsive li a {
     display: block;
     text-align: left;
   }
 }
+#doc-navbar-wrapper {
+  margin: 0 auto;
+  max-width: 80rem;
+  min-height: 3.5rem;
+  position: relative;
+  padding: 2rem .5rem 0;
+  border-bottom: 3px solid #606c71;
+  overflow: auto;
+}
+#doc-navbar-wrapper h1 {
+  margin: 0;
+}
+#doc-navbar-wrapper ul {
+  max-width: 82rem;
+  list-style: none;
+  overflow: hidden;
+  font-size: 75%;
+}
+#doc-navbar-wrapper ul li {
+  float: left;
+}
+#doc-navbar-wrapper ul a {
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  margin-right: 1.5rem;
+  margin-top: .7rem;
+  box-shadow: 0;
+  display: block;
+  color: #606c71;
+}
+#doc-navbar-wrapper ul li a:hover
+#doc-navbar-wrapper ul li a:active {
+  text-decoration: none;
+  color: #19CCAA;
+}
 
+#doc-navbar-wrapper .float-left {
+  float:left;
+}
+#doc-navbar-wrapper .float-right {
+  float:right;
+}
 
+@media screen and (max-width: 64em) {
+  #doc-navbar-wrapper ul li {
+    display: none;
+  }
+}
 .project-header {
   color: #fff;
   overflow: hidden;
   text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #610B0B, #AEB404);
+  background-color: #0967D2;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 @media screen and (min-width: 64em) {
   .project-header {
@@ -184,9 +247,6 @@ a:hover {
   padding: 0;
   list-style-type: none;
   text-align: center;
-}
-.project-header a {
-  min-width: 10rem;
 }
 .project-name {
   margin-top: 0;
@@ -213,7 +273,7 @@ a:hover {
   margin-bottom: 2rem;
   font-weight: normal;
   text-align: center;
-  opacity: 0.7;
+  color: #fff;
 }
 @media screen and (min-width: 64em) {
   .project-tagline {
@@ -230,10 +290,34 @@ a:hover {
     font-size: 1rem;
   }
 }
+.project-description {
+  margin-bottom: 2rem;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (min-width: 64em) {
+  .project-description {
+    font-size: 0.9rem;
+    margin-top: -1.8rem;
+  }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .project-description {
+    font-size: 0.8rem;
+    margin-top: -1.7rem;
+  }
+}
+@media screen and (max-width: 42em) {
+  .project-description {
+    font-size: 0.8rem;
+    margin-top: -1.5rem;
+  }
+}
 .site-footer {
   color: #fff;
   text-align: center;
-  background-color: #741B1F;
+  background-color: #0B4C5F;
   overflow: hidden;
 }
 @media screen and (max-width: 42em) {
@@ -257,17 +341,14 @@ a:hover {
   line-height: 2.5rem;
   list-style-type: none;
 }
-/* Make exception with icons like github */
-
-a[href^="http://"]:after,
-a[href^="https://"]:after:not(.github-img) {
-  content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
+a[href^="http://"]:not(.icon):after,
+a[href^="https://"]:not(.icon):after {
+  content: url('../img/Icon_External_Link.png');
   margin: 0 0 0 5px;
 }
 @font-face {
   font-family: myFont;
-  font-weight: bold;
-  src: url('../font/Lumberjack.ttf');
+  src: url('../font/Lumberjack.otf');
 }
 @font-face {
   font-family: titlesFont;
@@ -286,9 +367,7 @@ a[href^="https://"]:after:not(.github-img) {
   border-radius: 20%;
   /*box-shadow: ;*/
 }
-
 /* HOME BLOCKS */
-
 @media (min-width: 768px) {
   .col-sm-5 {
     width: 41.66666667%;
@@ -384,8 +463,6 @@ a[href^="https://"]:after:not(.github-img) {
   margin-left: 2rem;
   clear: both;
 }
-
-
 .site-wrapper {
   display: flex;
   min-height: 100%;
@@ -422,11 +499,19 @@ a[href^="https://"]:after:not(.github-img) {
     position: relative;
   }
 }
+.document-header {
+  margin: 0 auto;
+  max-width: 80rem;
+  min-height: 3.5rem;
+  position: relative;
+  padding: 2rem .5rem 0;
+}
 .document-wrapper {
   margin: 0 auto;
   max-width: 80rem;
   position: relative;
   padding: 2rem .5rem 0;
+  overflow: auto;
 }
 .content-wrapper {
   float: left;
@@ -475,7 +560,7 @@ a[href^="https://"]:after:not(.github-img) {
   margin-bottom: 1rem;
   font-weight: normal;
   font-family: titlesFont;
-  color: #BC2828;
+  color: #084B8A;
 }
 .content h1 {
   margin-top: 0;
@@ -535,15 +620,13 @@ a[href^="https://"]:after:not(.github-img) {
   background-color: #eff0f1;
   border: 0;
 }
-
 .left-sidebar {
-  color: #BC2828;
   float: left;
   position: relative;
   width: 16rem;
   margin-right: -16rem;
   overflow: hidden;
-  padding-top: .5rem;
+  margin-top: 1rem;
 }
 .right-sidebar {
   float: right;
@@ -593,8 +676,8 @@ a[href^="https://"]:after:not(.github-img) {
   padding: .2rem;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  border-right: 2px dotted #D2AA7B;
-  border-bottom: 2px dotted #D2AA7B;
+  border-right: 2px dotted #81BEF7;
+  border-bottom: 2px dotted #81BEF7;
 }
 #markdown-toc::before {
   content: "Contents";
@@ -614,7 +697,7 @@ a[href^="https://"]:after:not(.github-img) {
   }
 }
 .toc-title {
-  color: #BC2828;
+  color: #155799;
   padding-left: 1rem;
   font-weight: bold;
 }
@@ -634,7 +717,7 @@ a[href^="https://"]:after:not(.github-img) {
 }
 .current {
   font-weight: bold;
-  color: #B8631E;
+  color: #0B4C5F;
 }
 .align-center {
   display: block;
@@ -695,7 +778,6 @@ a[href^="https://"]:after:not(.github-img) {
   color: #BE81F7;
   padding: 3px 3px 10px 30px;
 }
-
 .content .doc-lang-table {
   border-collapse: separate;
   border-spacing: 2rem 0;
@@ -709,15 +791,11 @@ a[href^="https://"]:after:not(.github-img) {
   font-size: 90%;
 }
 .content .doc-lang-table th {
-  background-color: #FBF9D8;
+  background-color: #eaf7e3;
   font-size: 110%;
   font-weight: normal;
 }
 .highlighter-rouge {
   background-color: #f8f8f8;
   padding: 0.1em 0.3em;
-}
-
-img.zmqmsg {
-    max-height: 35px;
 }
