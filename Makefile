@@ -16,7 +16,7 @@ MACHINE = claradm
 
 .PHONY: build
 build:
-	@$(DOCKER_COMPOSE) run $(DOCKER_SERVICE) $(JEKYLL_BUILD)
+	@$(DOCKER_COMPOSE) run --rm $(DOCKER_SERVICE) $(JEKYLL_BUILD)
 
 .PHONY: serve
 serve:
