@@ -3,6 +3,7 @@ services:
   jekyll:
     image: jekyll/jekyll:pages
     container_name: jekyll_xmsg
+    command: jekyll serve --watch --config _config.yml,_config_prod.yml
     ports:
       - 4000:4000
     volumes:
