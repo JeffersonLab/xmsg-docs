@@ -1,8 +1,5 @@
 # xMsg documentation
 
-Under construction...
-
-
 ### Dependencies
 
 The xMsg documentation is generated using [Jekyll](http://jekyllrb.com/).
@@ -12,10 +9,17 @@ the required Jekyll version inside a container.
 
 ### Generating the docs
 
-To generate the documentation, start the Jekyll server inside a Docker
-container:
+To update the documentation and watch the changes locally, start the Jekyll
+server inside a Docker container:
 
     docker-compose up
 
-The output files will be located in `_site`.
+The generated static files will be located in `_site`.
+
+### Deploying the website
+
+To deploy to <http://claraweb.jlab.org/xmsg> do:
+
+    make build
+    make deploy
 
