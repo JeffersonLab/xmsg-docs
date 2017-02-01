@@ -24,7 +24,7 @@ serve:
 .PHONY: deploy
 deploy:
 	@echo "Deploying site..."
-	@rsync -avP --exclude=/api/ --delete-after _site/ "$(MACHINE):$(WEBDIR)/xmsg/"
+	@rsync -rlcvP --exclude=/api/ --delete-after _site/ "$(MACHINE):$(WEBDIR)/xmsg/"
 	@echo "Fixing permissions..."
 	@ssh $(MACHINE) "find $(WEBDIR) -user $(USER) -exec chgrp clasweba {} \; -exec chmod g+w {} \;"
 	@echo "Done"
