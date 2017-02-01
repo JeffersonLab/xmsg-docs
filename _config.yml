@@ -1,12 +1,12 @@
 # Setup
 title:        xMsg
 tagline:      A lightweight, yet full featured publish/subscribe messaging system
-baseurl:      "/xmsg-docs"
+baseurl:      "/xmsg"
 
 # About/contact
 author:
   name:       Vardan Gyurjyan
-  url:        "https://JeffersonLab.github.io"
+  url:        "https://claraweb.jlab.org"
 
 # Main Docs
 include: ["_downloads", "docs"]

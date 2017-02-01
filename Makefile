@@ -2,13 +2,12 @@
 #
 
 BUILDDIR      = _site
-CONFIG_FILES  = _config.yml,_config_prod.yml
 
 # Docker variables
 DOCKER_COMPOSE = docker-compose
 DOCKER_SERVICE = jekyll
 
-JEKYLL_BUILD   = jekyll build --verbose --config $(CONFIG_FILES)
+JEKYLL_BUILD   = jekyll build --verbose
 
 # Deploy variables
 WEBDIR = /group/clas/www/claraweb/html
