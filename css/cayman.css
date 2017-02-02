@@ -176,11 +176,12 @@ a:hover {
   min-height: 3.5rem;
   position: relative;
   padding: 2rem .5rem 0;
-  border-bottom: 3px solid #606c71;
+  border-bottom: 3px solid #6B9C8F;
   overflow: auto;
 }
 #doc-navbar-wrapper h1 {
   margin: 0;
+  color: #1F5752;
 }
 #doc-navbar-wrapper ul {
   max-width: 82rem;
@@ -198,7 +199,7 @@ a:hover {
   margin-top: .7rem;
   box-shadow: 0;
   display: block;
-  color: #606c71;
+  color: #577A6D;
 }
 #doc-navbar-wrapper ul li a:hover
 #doc-navbar-wrapper ul li a:active {
