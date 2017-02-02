@@ -677,7 +677,7 @@ a[href^="https://"]:not(.icon):after {
   padding: .2rem;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  border-right: 2px dotted #81BEF7;
+  border-left: 2px dotted #81BEF7;
   border-bottom: 2px dotted #81BEF7;
 }
 #markdown-toc::before {
