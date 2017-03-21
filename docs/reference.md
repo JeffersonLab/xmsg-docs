@@ -6,7 +6,7 @@ title: Reference
 
 Links to the language specific automatically generated API reference documentation.
 
-* [Java API]({{ site.baseurl }}/api/java/)
+* [Java API]({{ site.baseurl }}/api/java/current/)
 
 * [C++ API]({{ site.baseurl }}/api/cpp/)
 
