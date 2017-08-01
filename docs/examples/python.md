@@ -1,5 +1,5 @@
 ---
-layout: doc_lang
+layout: doc_example
 type: examples
 type_desc: Examples
 id: python

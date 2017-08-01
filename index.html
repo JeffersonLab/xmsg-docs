@@ -7,37 +7,45 @@ title: Main page
 
   <div class="row">
     <div class="col-md-11 nofloat center-block landing-row">
-      <img class="col-sm-5 landing-left-image" src="{{ site.baseurl }}/img/image1.png" alt="Example Image">
-      <h3 class="col-sm-7 landing-row-title">xMsg is a lightweight, yet full featured publish/subscribe messaging system</h3>
+      <img class="col-sm-5 landing-left-image" src="{{ site.baseurl }}/img/image12.jpg" alt="Example Image">
+      <h3 class="col-sm-7 landing-row-title">xMsg represents many-to-many communication model</h3>
       <p class="col-sm-7">
-        An xMsg actor is required to publish or subscribe messages. Messages are identified by topics, and contain metadata and user serialized data. </p>
+        xMsg creates an environment where various information producers and consumers can communicate all at the same time.
+        Each piece of information can be delivered to various consumers concurrently, while each consumer can receive
+        information from different producers.
+      </p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-11 nofloat center-block landing-row">
-      <img class="col-sm-5 landing-right-image" src="{{ site.baseurl }}/img/image1.png" alt="Example Image">
-      <h3 class="col-sm-7 landing-row-title">xMsg is a lightweight, yet full featured publish/subscribe messaging system</h3>
+      <img class="col-sm-5 landing-right-image" src="{{ site.baseurl }}/img/image2.jpg" alt="Example Image">
+      <h3 class="col-sm-7 landing-row-title">Space decoupling</h3>
       <p class="col-sm-7">
-       An xMsg actor is required to publish or subscribe messages. Messages are identified by topics, and contain metadata and user serialized data. </p>
+       xMsg actors, i.e. information producers and consumers do not need to know each other. Message addressing is
+        based on the message topic. Information is published to a topic or named logical channel. Consumers will receive
+        all messages published to the topic to which they subscribe, and all subscribers to a topic will receive the same
+        message. The producer is responsible for defining classes of message topics to which consumers can subscribe.  </p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-11 nofloat center-block landing-row">
-      <img class="col-sm-5 landing-left-image" src="{{ site.baseurl }}/img/image1.png" alt="Example Image">
-      <h3 class="col-sm-7 landing-row-title">xMsg is a lightweight, yet full featured publish/subscribe messaging system</h3>
+      <img class="col-sm-5 landing-left-image" src="{{ site.baseurl }}/img/image3.jpg" alt="Example Image">
+      <h3 class="col-sm-7 landing-row-title">Time decoupling</h3>
       <p class="col-sm-7">
-        An xMsg actor is required to publish or subscribe messages. Messages are identified by topics, and contain metadata and user serialized data. </p>
+         xMsg actors do not have to be actively participating in the information handling at the same time.
+        Information delivery is mediated through the xMsg proxy. Even though synchronization among information processing
+        actors in most cases is not required, xMsg presents synchronized communication channels as well.   </p>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-11 nofloat center-block landing-row">
-      <img class="col-sm-5 landing-right-image" src="{{ site.baseurl }}/img/image1.png" alt="Example Image">
-      <h3 class="col-sm-7 landing-row-title">xMsg is a lightweight, yet full featured publish/subscribe messaging system</h3>
-      <p class="col-sm-7">
-        An xMsg actor is required to publish or subscribe messages. Messages are identified by topics, and contain metadata and user serialized data. </p>
-    </div>
-  </div>
+  <!--<div class="row">-->
+    <!--<div class="col-md-11 nofloat center-block landing-row">-->
+      <!--<img class="col-sm-5 landing-right-image" src="{{ site.baseurl }}/img/image1.png" alt="Example Image">-->
+      <!--<h3 class="col-sm-7 landing-row-title">xMsg is a lightweight, yet full featured publish/subscribe messaging system</h3>-->
+      <!--<p class="col-sm-7">-->
+        <!--An xMsg actor is required to publish or subscribe messages. Messages are identified by topics, and contain metadata and user serialized data. </p>-->
+    <!--</div>-->
+  <!--</div>-->
 </div>
