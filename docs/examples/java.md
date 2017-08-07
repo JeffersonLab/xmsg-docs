@@ -1,7 +1,7 @@
 ---
 layout: doc_lang
-type: examples
-type_desc: Examples
+group_id: examples
+group_title: Examples
 id: java
 title: Java
 ---

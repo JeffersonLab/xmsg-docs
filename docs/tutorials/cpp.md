@@ -1,7 +1,7 @@
 ---
 layout: doc_lang
-type: tutorials
-type_desc: Tutorials
+group_id: tutorials
+group_title: Tutorials
 id: cpp
 title: C++
 ---
