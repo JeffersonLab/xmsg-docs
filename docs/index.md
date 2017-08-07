@@ -5,7 +5,7 @@ title: Documentation
 ---
 
 Welcome to the documentation page for xMsg.
-For an overview of CLARA, read the [**Guides**]({{ site.baseurl }}/docs/guides/) section.
+For an overview of xMsg, read the [**Guides**]({{ site.baseurl }}/docs/guides/) section.
 Or visit [Quick Start]({{ site.baseurl }}/docs/quickstart/)
 for an introduction to writing actors in your preferred language.
 
