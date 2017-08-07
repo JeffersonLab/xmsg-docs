@@ -1,5 +1,8 @@
 ---
 layout: doc_guide
+group_id: guides
+group_title: Guides
+id: registration
 title: Registration/Discovery
 ---
 

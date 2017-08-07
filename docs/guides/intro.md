@@ -1,5 +1,8 @@
 ---
 layout: doc_guide
+group_id: guides
+group_title: Guides
+id: intro
 title: Introduction
 ---
 
