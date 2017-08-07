@@ -224,7 +224,8 @@ Connections are managed by the xMsg actor,
 that keeps an internal **connection pool** to cache and reuse connections.
 
 <div class="admonition note">
-The global `ZContext` wrapper is not used to keep a list of created sockets.
+The global <code>ZContext</code> wrapper is not used
+to keep a list of created sockets.
 Thus, in order to destroy the context, all connections must be already
 closed and the actor destroyed too,
 otherwise the context will hang because some sockets are not closed yet.
@@ -447,7 +448,8 @@ the following table shows which topics are matched:
 
 <div class="admonition note">
 Regular expressions and wildcards are not supported. Only prefix matching.
-For example, trying to select just the subject of any domain, `*:B`,
+For example,
+trying to select just the subject of any domain, <code>*:B</code>,
 is not a valid subscription topic.
 </div>
 
@@ -488,7 +490,7 @@ because the subscription could not be started.
 
 <div class="admonition note">
 Since the subscription will be checked before starting the background thread,
-the `subscribe` method can block
+the <code>subscribe</code> method can block
 several hundred of milliseconds waiting for a control message
 to confirm that the subscription can receive messages.
 </div>
