@@ -1,6 +1,7 @@
 version: '2'
 services:
   jekyll:
+    command: jekyll serve
     image: jekyll/jekyll:pages
     container_name: jekyll_xmsg
     ports:
