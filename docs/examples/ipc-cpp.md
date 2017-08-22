@@ -2,8 +2,8 @@
 layout: doc_lang
 group_id: examples
 group_title: Examples
-id: cpp
-title: C++
+id: ipc-cpp
+title: IPC C++
 ---
 
 # Publisher Subscriber Example using ipc_lib header with xMsg
