@@ -11,7 +11,7 @@ JEKYLL_BUILD   = jekyll build --verbose
 
 # Deploy variables
 WEBDIR = /group/clas/www/claraweb/html
-MACHINE = claradm
+MACHINE = clara1601
 
 .PHONY: build
 build:
