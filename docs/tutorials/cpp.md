@@ -101,6 +101,17 @@ Now `item` is a pointer to a newly added item to the payload. Using this pointer
 you can set the item name and the data for the item. The data is a pointer inside
 `item` accessible with `mutable_data()`.
 
+To read a Payload from a message, first create a buffer object with the data from
+the message:
+
+  `const std::vector<std::uint8_t>& buffer = msg.data();`
+
+
+Then take the buffer object created, and use xmsg::proto::Payload's `ParseFromArray`:
+
+  `payload.ParseFromArray(buffer.data(), buffer.size());`
+
+
 To send a payload, you first need to serialize the payload before you can create
 a message containing it. To serialize the payload, you first want to create a buffer
 object:
