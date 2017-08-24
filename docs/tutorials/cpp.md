@@ -95,7 +95,7 @@ has a method called `add_item()`, which adds a new item to the payload and retur
 a pointer to the new item. Making a call similar to this would give you a pointer
 to the item:
 
-  `xmsg::proto::Payload::Item* item = payload.add_item();`
+  `xmsg::proto::Payload_Item* item = payload.add_item();`
 
 Now `item` is a pointer to a newly added item to the payload. Using this pointer,
 you can set the item name and the data for the item. The data is a pointer inside
