@@ -70,6 +70,7 @@ call:
 Where `user_callback` is an object containing the instructions of what to do with
 the received message.
 
+
 ## User Callback
 
 A user defined callback method needs to be created in order for the xMsg subscriber
@@ -81,3 +82,49 @@ the subscriber can call:
 
 
 Where `msg` is the received message.
+
+
+## Payloads
+
+To create a payload for xMsg, first create the object with:
+
+  `xmsg::proto::Payload payload;`
+
+After creating the object, you can begin to add items to the object to store. Payload
+has a method called `add_item()`, which adds a new item to the payload and returns
+a pointer to the new item. Making a call similar to this would give you a pointer
+to the item:
+
+  `xmsg::proto::Payload::Item* item = payload.add_item();`
+
+Now `item` is a pointer to a newly added item to the payload. Using this pointer,
+you can set the item name and the data for the item. The data is a pointer inside
+`item` accessible with `mutable_data()`.
+
+To send a payload, you first need to serialize the payload before you can create
+a message containing it. To serialize the payload, you first want to create a buffer
+object:
+
+  `auto buffer = std::vector<std::uint8_t>(payload.ByteSize());`
+
+
+Then you need to serialize the payload:
+
+  `payload.SerializeToArray(buffer.data(), buffer.size());`
+
+
+Then return the buffer. After creating the buffer containing a serialized payload,
+you can begin to craft the message. Create a method receiving a topic and the
+payload to return the signature of an xMsg message:
+
+  ```
+  xmsg::Message payload_message(xmsg::Topic topic, const xmsg::proto::Payload payload) {
+      auto buffer = serialize_payload(payload);
+      return {topic, xmsg::mimetype::xmsg_data, std::move(buffer)};
+  }
+  ```
+
+
+After creating this method, you can call it to create the message:
+
+  `message = payload_message(topic, payload);`
