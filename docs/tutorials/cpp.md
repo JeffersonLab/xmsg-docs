@@ -101,6 +101,14 @@ Now `item` is a pointer to a newly added item to the payload. Using this pointer
 you can set the item name and the data for the item. The data is a pointer inside
 `item` accessible with `mutable_data()`.
 
+Items from payloads can be named and given data. To set the name of a payload item:
+
+  `item->set_name("test");`
+
+In order to set the data for a payload item, use:
+
+  `item->set_allocated_data(*data);`
+
 To read a Payload from a message, first create a buffer object with the data from
 the message:
 
