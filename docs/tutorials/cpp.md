@@ -37,11 +37,8 @@ A proxy actor can also be crafted if it needs to perform specific actions.
 After creating these actor objects, the connections need to be created for each
 actor. This is done with:
 
-  Connection for the producer:<br>
-    `xmsg::ProxyConnection connection = producer.connect(xmsg::util::to_host_addr("localhost"));`<br>
-
-  Connection for the consumer:<br>
-    `xmsg::ProxyConnection connection = consumer.connect(xmsg::util::to_host_addr("localhost"));`
+  Connection for the actor:<br>
+    `xmsg::ProxyConnection connection = ACTOR.connect(xmsg::util::to_host_addr("localhost"));`
 
 
 ## Messages
