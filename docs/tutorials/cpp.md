@@ -138,12 +138,32 @@ payload to return the signature of an xMsg message:
 
   ```
   xmsg::Message payload_message(xmsg::Topic topic, const xmsg::proto::Payload payload) {
+      // serialize_payload just creates a buffer object, serializes the payload
+      // to an array, and returns the buffer, which can be seen above
       auto buffer = serialize_payload(payload);
       return {topic, xmsg::mimetype::xmsg_data, std::move(buffer)};
   }
   ```
 
 
-After creating this method, you can call it to create the message:
+After creating this method, you can call it to create the message conatining the
+payload:
 
   `message = payload_message(topic, payload);`
+
+
+## Arrays
+
+When arrays are sent, you cannot call parse_message on the message because it is
+not a primitive. Here is a quick snippet of code to read an array of ints from a
+message:
+
+  ```
+  auto data2 = xmsg::parse_message<xmsg::proto::Data>(msg);
+  auto rep2 = data2.flsint64a();
+  std::int64_t values[3];
+  std::copy(rep2.begin(), rep2.end(), values);
+  for (int val : values) {
+    std::cout << val << std::endl;
+  }
+  ```
