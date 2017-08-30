@@ -104,7 +104,7 @@ Items from payloads can be named and given data. To set the name of a payload it
 
 In order to set the data for a payload item, use:
 
-  `item->set_allocated_data(*data);`
+  `item->mutable_data()->CopyFrom(data);`
 
 To read a Payload from a message, first create a buffer object with the data from
 the message:
