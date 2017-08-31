@@ -95,3 +95,30 @@ assign the callback to the subscriber, it is passed in the method 'subscribe'
 
 The Callback is passed the message, which is parsed by `xmsg::parse_message` and
 can be seen in the current UserCallback.
+
+## Payloads
+
+To create a payload, first create the payload object:
+
+  `xmsg::proto::Payload payload;`
+
+Then create an item for the payload:
+
+  `xmsg::proto::Payload_Item* item = payload.add_item();`
+
+Then set the name of the item:
+
+  `item->set_name("test");`
+
+Then create set the data:
+
+  `item->mutable_data()->CopyFrom(data);`
+
+Now that you have the payload created, set the message for the producer to contain
+the payload:
+
+  `prod << payload;`
+
+After setting the message to the payload, send the message:
+
+  `prod.sendMsg();`
