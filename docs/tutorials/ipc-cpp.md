@@ -122,3 +122,10 @@ the payload:
 After setting the message to the payload, send the message:
 
   `prod.sendMsg();`
+
+In order to create a payload with multiple items, simply continue to create payload
+items like before, using `payload.add_item()` will create another pointer to a new
+item within the payload. When it comes time to parse the payload, you will need to
+know how many items are within that payload. Use `payload.item_size()` to get the
+number of items within that payload. To access the item, simply call `payload.item(i)`
+with `i` being an index to access.
