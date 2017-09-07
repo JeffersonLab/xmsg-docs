@@ -148,6 +148,9 @@ payload:
 
   `message = payload_message(topic, payload);`
 
+Under the directory xMsgMultPayloads, there is an example of a producer subscriber
+model with the producer sending a payload containing multiple payload items and
+the subscriber receiving the payload and printing out the names of each item.
 
 ## Arrays
 
