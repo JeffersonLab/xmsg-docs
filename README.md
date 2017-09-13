@@ -12,7 +12,7 @@ the required Jekyll version inside a container.
 To update the documentation and watch the changes locally, start the Jekyll
 server inside a Docker container:
 
-    docker-compose up
+    make serve
 
 The generated static files will be located in `_site`.
 

@@ -19,7 +19,7 @@ build:
 
 .PHONY: serve
 serve:
-	@$(DOCKER_COMPOSE) up || true
+	@$(DOCKER_COMPOSE) up || $(DOCKER_COMPOSE) stop
 
 .PHONY: deploy
 deploy:
