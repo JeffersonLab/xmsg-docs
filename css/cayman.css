@@ -67,7 +67,7 @@ a:hover {
     margin-left: 0;
   }
 }
-#header-navbar {
+#site-navbar {
   position: absolute;
   top: 0;
   left: 0;
@@ -142,7 +142,7 @@ a:hover {
     float: right;
     display: inline-block;
   }
-  #header-navbar ul {
+  #site-navbar ul {
     display: none;
   }
 }
