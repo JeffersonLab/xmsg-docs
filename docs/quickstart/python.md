@@ -5,4 +5,3 @@ group_title: Quick Start
 id: python
 title: Python
 ---
-In progress...

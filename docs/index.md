@@ -36,4 +36,4 @@ for an introduction to writing actors in your preferred language.
 
 ## Use cases
 
-TODO.
+* [IPC implementation with xMsg C++]({{ site.baseurl }}/docs/software/ipc_lib/usage.html)
