@@ -799,4 +799,5 @@ a[href^="https://"]:not(.icon):after {
 .highlighter-rouge {
   background-color: #f8f8f8;
   padding: 0.1em 0.3em;
+  overflow: auto;
 }
