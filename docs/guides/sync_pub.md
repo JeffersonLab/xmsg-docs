@@ -21,12 +21,11 @@ but this time the *metadata* is modified with a unique `replyTo` field.
 Then the method will block until a response message is received
 or the timeout occurs, whichever happens first.
 
-<div class="admonition note">
+{: .note }
 In order to receive a response,
 the subscription callback must support sync-publication
 and publish response messages to the expected topic.
 xMsg does not publish a response automatically.
-</div>
 
 As with normal publication,
 the xMsg actor can sync-publish messages on multiples threads,

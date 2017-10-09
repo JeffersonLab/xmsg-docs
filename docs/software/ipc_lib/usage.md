@@ -60,9 +60,10 @@ Setting the message:
 prod << "message to set to";
 ```
 
-**With the current implementation of the overloaded `<<` and `>>` operators, reading
+{: .note }
+With the current implementation of the overloaded `<<` and `>>` operators, reading
 and writing composite messages is not supported, meaning if used twice, the operators
-will overwrite the first message and not append to it.**
+will overwrite the first message and not append to it.
 
 After calling the `run()` method, or setting the message through `<<` operators,
 the message will have a value. To set the message and topic to all empty strings,
