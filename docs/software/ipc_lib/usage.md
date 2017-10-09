@@ -1,8 +1,5 @@
 ---
 layout: sw_ipc
-group_id: software/ipc_lib
-group_title: IPC with xMsg C++
-id: usage
 title: IPC library usage
 ---
 

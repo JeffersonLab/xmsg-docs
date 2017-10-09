@@ -1,7 +1,4 @@
 ---
-layout: doc_lang
-group_id: examples
-group_title: Examples
-id: cpp
+layout: doc_example
 title: C++
 ---

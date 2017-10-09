@@ -5,14 +5,14 @@ layout: base
 
 <div class="document-wrapper">
   <aside class="left-sidebar">
-    <strong>{{ page.group_title }}</strong>
+    <strong>{{ layout.title }}</strong>
     <ul>
-      {% assign current = page.url | downcase | split: '/' %}
-      {% assign words = current[3] | downcase | split: '.' %}
       {% for doc in layout.documents %}
+        {% capture doc_url %}/docs/{{ layout.id }}/{{ doc }}.html{% endcapture %}
         {% for md in site.pages %}
-          {% if doc == md.id and md.group_id == page.group_id %}
-            <li><a href="{{ site.baseurl }}/docs/{{ page.group_id }}/{{ doc }}.html" {% if words[0] == doc %}class='current'{% endif %}>{{ md.title }}</a></li>
+          {% if doc_url == md.url %}
+            {% capture link_title %}{% if md.link %}{{ md.link }}{% else %}{{ md.title }}{% endif %}{% endcapture %}
+            <li><a href="{{ site.baseurl }}/{{ doc_url }}" {% if doc_url == page.url %}class='current'{% endif %}>{{ link_title }}</a></li>
           {% endif %}
         {% endfor %}
       {% endfor %}

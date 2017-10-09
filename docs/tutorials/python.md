@@ -1,7 +1,4 @@
 ---
-layout: doc_lang
-group_id: tutorials
-group_title: Tutorials
-id: python
+layout: doc_tutorial
 title: Python
 ---

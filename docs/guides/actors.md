@@ -1,8 +1,5 @@
 ---
 layout: doc_guide
-group_id: guides
-group_title: Guides
-id: actors
 title: Actors
 ---
 
