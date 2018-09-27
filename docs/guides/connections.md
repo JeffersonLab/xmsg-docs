@@ -70,13 +70,13 @@ The three sockets will be connected to the proxy address using the TCP protocol.
 To check the connection, the `pubSocket` will publish a control message to the proxy,
 with the following format:
 
-![]({{ site.baseurl }}/img/ctrl-pub-req.png){: .align-center .zmqmsg }
+![]({{ site.baseurl }}/assets/images/ctrl-pub-req.png){: .align-center .zmqmsg }
 
 If the request was successfully published,
 the proxy will send to the `ctrlSocket` a message with this format
 (note that the first frame will be stripped):
 
-![]({{ site.baseurl }}/img/ctrl-pub-ack.png){: .align-center .zmqmsg }
+![]({{ site.baseurl }}/assets/images/ctrl-pub-ack.png){: .align-center .zmqmsg }
 
 If no response is received after 100 ms, the request will be published again.
 After 10 unsuccessful requests, an exception will be thrown

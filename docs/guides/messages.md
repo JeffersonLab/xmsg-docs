@@ -16,7 +16,7 @@ All actors subscribed to the topic of a published message will receive it.
 
 A message is sent through the wire as a ZMQ message composed of three frames:
 
-![]({{ site.baseurl }}/img/raw-message.png){: .align-center .zmqmsg }
+![]({{ site.baseurl }}/assets/images/raw-message.png){: .align-center .zmqmsg }
 
 The **topic** frame is a 3-part string with the format:
 `<DOMAIN>:<SUBJECT>:<TYPE>`,
