@@ -1,6 +1,6 @@
 ---
-layout: sw_ipc
 title: IPC implementation details
+section: ipc_lib
 ---
 
 ## Code structure

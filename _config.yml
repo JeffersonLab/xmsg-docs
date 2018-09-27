@@ -18,6 +18,12 @@ exclude:
   - Dockerfile
   - docker-compose.yml
 
+defaults:
+  - scope:
+      path: docs
+    values:
+      layout: document
+
 # Others
 markdown: kramdown
 kramdown:

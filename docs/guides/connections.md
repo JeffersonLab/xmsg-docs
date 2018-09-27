@@ -1,5 +1,4 @@
 ---
-layout: doc_guide
 title: Connections
 ---
 

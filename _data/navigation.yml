@@ -1,0 +1,28 @@
+examples:
+  title: Examples
+  documents: [java, cpp, python]
+
+quickstart:
+  title: Quickstart
+  documents: [java, cpp, python]
+
+tutorials:
+  title: Tutorials
+  documents: [java, cpp, python]
+
+guides:
+  title: Guides
+  documents:
+    - intro
+    - actors
+    - messages
+    - connections
+    - publications
+    - subscriptions
+    - sync_pub
+    - registration
+
+ipc_lib:
+    title: IPC with xMsg C++
+    dir: software/ipc_lib
+    documents: [usage, internals]

@@ -1,6 +1,6 @@
 ---
-layout: sw_ipc
 title: IPC library usage
+section: ipc_lib
 ---
 
 ## Actors
