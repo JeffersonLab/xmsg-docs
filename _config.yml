@@ -1,16 +1,22 @@
 # Setup
 title:        xMsg
 tagline:      Multilingual publish-subscribe messaging system
-baseurl:      "/xmsg"
+baseurl:      /xmsg
 
 # About/contact
 author:
   name:       Vardan Gyurjyan
-  url:        "https://claraweb.jlab.org"
+  url:        https://claraweb.jlab.org
 
 # Main Docs
-include: ["_downloads", "docs"]
-exclude: ["build", "source", "Makefile", "README.md", "scripts", "Dockerfile", "docker-compose.yml"]
+exclude:
+  - build
+  - source
+  - Makefile
+  - README.md
+  - scripts
+  - Dockerfile
+  - docker-compose.yml
 
 # Others
 markdown: kramdown
