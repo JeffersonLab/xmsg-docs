@@ -4,23 +4,23 @@ use_nav: 1
 ---
 {% include toc.html %}
 
-{% capture section %}{% if page.section %}{{ page.section }}{% else %}{{ page.dir | split: "/" | last }}{% endif %}{% endcapture %}
-{% assign section_meta = site.data.navigation[section] %}
+{%- capture section -%}{% if page.section %}{{ page.section }}{% else %}{{ page.dir | split: "/" | last }}{% endif %}{%- endcapture -%}
+{%- assign section_meta = site.data.navigation[section] -%}
 
 <div class="document-wrapper">
   <aside class="left-sidebar">
     <strong>{{ section_meta.title }}</strong>
     <ul>
-      {% for doc in section_meta.documents %}
-        {% capture section_dir %}{% if section_meta.dir %}{{ section_meta.dir }}{% else %}{{ section }}{% endif %}{% endcapture %}
-        {% capture doc_url %}/docs/{{ section_dir }}/{{ doc }}.html{% endcapture %}
-        {% for md in site.pages %}
-          {% if doc_url == md.url %}
-            {% capture link_title %}{% if md.link %}{{ md.link }}{% else %}{{ md.title }}{% endif %}{% endcapture %}
-            <li><a href="{{ site.baseurl }}{{ doc_url }}" {% if doc_url == page.url %}class='current'{% endif %}>{{ link_title }}</a></li>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
+      {%- for doc in section_meta.documents %}
+        {%- capture section_dir -%}{% if section_meta.dir %}{{ section_meta.dir }}{% else %}{{ section }}{% endif %}{%- endcapture -%}
+        {%- capture doc_url -%}/docs/{{ section_dir }}/{{ doc }}.html{%- endcapture -%}
+        {%- for md in site.pages %}
+          {%- if doc_url == md.url %}
+            {%- capture link_title -%}{% if md.link %}{{ md.link }}{% else %}{{ md.title }}{% endif %}{%- endcapture -%}
+            <li><a href="{{ site.baseurl }}{{ doc_url }}"{% if doc_url == page.url %} class="current"{% endif %}>{{ link_title }}</a></li>
+          {%- endif %}
+        {%- endfor %}
+      {%- endfor %}
     </ul>
   </aside>
   <div class="content-wrapper">
