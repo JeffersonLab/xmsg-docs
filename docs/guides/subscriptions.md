@@ -2,8 +2,6 @@
 title: Subscriptions
 ---
 
-## Subscriptions
-
 To receive messages,
 an actor must **subscribe** to a **proxy** for a given **topic**.
 If the topic of a message published to the proxy
@@ -14,7 +12,7 @@ The callback will run for every received message.
 The actor runs callbacks of all subscriptions in a dedicated **threadpool**,
 thus the callback must be thread-safe.
 
-### Topic matching
+## Topic matching
 
 The topics are matched by prefix.
 For example, if the subscription topic is `A:B`,
@@ -34,7 +32,7 @@ Regular expressions and wildcards are not supported. Only prefix matching.
 For example, trying to select just the subject of any domain, `*:B`,
 is not a valid subscription topic.
 
-### Starting the subscription
+## Starting the subscription
 
 The xMsg actor presents a single call to start a subscription:
 
@@ -92,7 +90,7 @@ but all of them will share the same threadpool to run the callbacks.
 The size of the threadpool must be chosen
 based on the number of subscriptions and the expected rate of messages.
 
-### User-defined callbacks
+## User-defined callbacks
 
 The callback interface presents a single method,
 that receives a message that matches the topic of the subscription:
@@ -179,7 +177,7 @@ xMsgSubscription sub = actor.subscribe(connection, topic, msg -> {
 });
 ```
 
-### Stopping subscriptions
+## Stopping subscriptions
 
 To stop a subscription, the subscription **handler** is required:
 

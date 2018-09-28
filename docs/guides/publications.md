@@ -2,8 +2,6 @@
 title: Publications
 ---
 
-## Publications
-
 The xMsg actor presents a single method to publish messages:
 
 ```java

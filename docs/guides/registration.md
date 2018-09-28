@@ -2,8 +2,6 @@
 title: Registration/Discovery
 ---
 
-## Registration/Discovery
-
 If an actor is subscribed to a topic of interest,
 or it is periodically publishing messages,
 it can register with the xMsg registrar service
@@ -13,7 +11,7 @@ The registrar service must be running as a separate process
 in some selected node. The actors define the address
 of the *default registrar* during construction.
 
-### Registering the actor with the registrar
+## Registering the actor with the registrar
 
 To register the actor, the type of the registration
 (publisher or subscriber),
@@ -62,7 +60,7 @@ The *default proxy* will be registered as the address
 where the actor is publishing or subscribed to.
 There may be multiple actors registered to the same address and topic.
 
-### Removing the actor from the registrar
+## Removing the actor from the registrar
 
 To remove a previously registered actor,
 the same registration parameters must be used
@@ -87,7 +85,7 @@ void deregister(xMsgRegInfo info, xMsgRegAddress address, int timeout)
 Obviously,
 the address of the registrar must be the same one used for registration.
 
-### Discovering registered actors
+## Discovering registered actors
 
 Actors can discover others registered actors that match a given query.
 The registration information of those actors (**address** and **topic**),
@@ -143,7 +141,7 @@ try (xMsg actor = new xMsg("actor")) {
 }
 ```
 
-### Topic matching
+## Topic matching
 
 The discovery queries will match registered actors by topic
 using different rules for publishers and subscribers.

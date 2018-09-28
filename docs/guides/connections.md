@@ -2,8 +2,6 @@
 title: Connections
 ---
 
-## Connections
-
 In order to publish or subscribe messages,
 a connection to an xMsg **proxy** must be obtained.
 Connections are managed by the xMsg actor,
@@ -15,7 +13,7 @@ Thus, in order to destroy the context, all connections must be already
 closed and the actor destroyed too,
 otherwise the context will hang because some sockets are not closed yet.
 
-### Connection fields
+## Connection fields
 
 Each connection contains the address of the proxy and three ZMQ sockets:
 
@@ -35,7 +33,7 @@ and `RRRRR` is a 5-digit random number between 0 and 99999.
 This ID is required to register the `ctrlSocket` with the proxy
 (ZMQ uses an identity per socket for REQ/REP communications).
 
-### Connection pool
+## Connection pool
 
 To get a connection from the connection pool, a **proxy address** is required.
 The connection pool keeps a set of cached connections.
@@ -60,7 +58,7 @@ try (xMsgConnection connection = actor.getConnection(proxyAddress)) {
 The actor must be destroyed in order to close all connections cached in the
 connection pool.
 
-### Creating connections
+## Creating connections
 
 When the connection pool does not have a cached connection to the given proxy,
 a new connection will be created.

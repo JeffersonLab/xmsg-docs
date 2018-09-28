@@ -13,7 +13,7 @@ tutorials:
 guides:
   title: Guides
   documents:
-    - intro
+    - index
     - actors
     - messages
     - connections

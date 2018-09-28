@@ -2,8 +2,6 @@
 title: Messages
 ---
 
-## Messages
-
 Actors communicate with others actors by publishing messages
 to given **topics**, or named channels.
 Subscribers can receive the messages published to the topics
@@ -11,7 +9,7 @@ to which they are interested, by subscribing to them.
 The messages are not sent directly to another actor.
 All actors subscribed to the topic of a published message will receive it.
 
-### Raw message format
+## Raw message format
 
 A message is sent through the wire as a ZMQ message composed of three frames:
 
@@ -38,7 +36,7 @@ of the actual data of the message.
 xMsg provides help to serialize primitive data types.
 Complex objects must be serialized before creating the message.
 
-### Creating messages
+## Creating messages
 
 To construct a message,
 the topic, the metadata and the serialized data are needed:
@@ -108,7 +106,7 @@ assert msg2.getMimeType().equals(xMsgMimeType.ARRAY_DOUBLE);
 assert msg3.getMimeType().equals(xMsgMimeType.STRING);
 ```
 
-### Reading messages
+## Reading messages
 
 To read the data of a message, the *mime-type* must be checked first.
 If the type is known, the data can be deserialized:

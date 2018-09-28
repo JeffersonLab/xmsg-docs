@@ -2,8 +2,6 @@
 title: Synchronous Publication
 ---
 
-## Synchronous Publication
-
 xMsg supports publishing a message and receiving a response,
 with the following method:
 
@@ -39,7 +37,7 @@ executor.submit(() -> {
 });
 ```
 
-### Receiving responses
+## Receiving responses
 
 When a message is sync-published,
 its metadata will be modified to contain a unique `replyTo` field.
@@ -106,7 +104,7 @@ This poller thread is started on the xMsg constructor,
 but every socket is created and subscribed the first time
 a message is sync-published to a proxy.
 
-### Publishing responses
+## Publishing responses
 
 To reply sync-publication messages,
 the *user-defined* callback must explicitly support publication of responses.
