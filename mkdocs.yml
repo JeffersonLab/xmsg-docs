@@ -7,6 +7,21 @@ copyright: Copyright &copy; 2019 Vardan Gyurjyan
 
 docs_dir: content
 
+nav:
+  - Overview: index.md
+  - User's Guide:
+    - guides/actors.md
+    - guides/messages.md
+    - guides/connections.md
+    - guides/publications.md
+    - guides/subscriptions.md
+    - guides/sync_pub.md
+    - guides/registration.md
+    - guides/scripts.md
+  - Download: download.md
+  - Reference: reference.md
+  - About: about.md
+
 markdown_extensions:
   - admonition
   - attr_list
