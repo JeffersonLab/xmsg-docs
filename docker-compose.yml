@@ -1,10 +1,9 @@
 version: '2'
 services:
-  jekyll:
-    command: jekyll serve
-    image: jekyll/minimal:stable
-    container_name: jekyll_xmsg
+  mkdocs:
+    image: squidfunk/mkdocs-material
+    container_name: mkdocs_xmsg
     ports:
-      - 4000:4000
+      - 8000:8000
     volumes:
-      - .:/srv/jekyll
+      - .:/docs

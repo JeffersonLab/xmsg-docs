@@ -7,13 +7,16 @@ for an introduction to writing actors in your preferred language.
 
 ## Supported Languages
 
+<div class="doc-lang-table" markdown="1">
+
 | Java | C++ | Python |
 |:-----|:----|:-------|
 | [Quick Start][jq] | [Quick Start][cq] | [Quick Start][pq] |
 | [Tutorial][jt]    | [Tutorial][ct]    | [Tutorial][pt]    |
 | [Examples][je]    | [Examples][ce]    | [Examples][pe]    |
 | [Reference][jr]   | [Reference][cr]   | [Reference][pr]   |
-{: .doc-lang-table }
+
+</div>
 
 [jq]: quickstart/java.md
 [jt]: tutorials/java.md

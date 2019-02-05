@@ -1,0 +1,49 @@
+site_name: xMsg
+site_url: https://claraweb.jlab.org/xmsg/
+site_description: Multilingual publish-subscribe messaging system
+site_author: Vardan Gyurjyan
+
+copyright: Copyright &copy; 2019 Vardan Gyurjyan
+
+docs_dir: content
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - def_list
+  - footnotes
+  - smarty
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.extrarawhtml
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+theme:
+  name: material
+  palette:
+    primary: teal
+    accent: teal
+  favicon: assets/images/favicon.ico
+  logo: assets/images/logo.png
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - type: github
+      link: https://github.com/JeffersonLab/xmsg-docs

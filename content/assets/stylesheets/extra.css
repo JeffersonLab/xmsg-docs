@@ -1,0 +1,19 @@
+.md-typeset .admonition,
+.md-typeset .details {
+  font-size: 1.4rem
+}
+
+.zmqmsg {
+  height: 3.6rem;
+}
+
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doc-lang-table th,
+.doc-lang-table td {
+  width: 16rem;
+}
