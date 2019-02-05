@@ -1,7 +1,4 @@
----
-title: IPC library usage
-section: ipc_lib
----
+# IPC library usage
 
 ## Actors
 

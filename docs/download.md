@@ -1,7 +1,4 @@
----
-layout: page
-title: Download
----
+# Download
 
 With Gradle:
 

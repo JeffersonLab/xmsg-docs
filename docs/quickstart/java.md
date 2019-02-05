@@ -1,3 +1,1 @@
----
-title: Java
----
+# Java Quickstart

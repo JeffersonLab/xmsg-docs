@@ -1,6 +1,4 @@
----
-title: Synchronous Publication
----
+# Synchronous Publication
 
 xMsg supports publishing a message and receiving a response,
 with the following method:

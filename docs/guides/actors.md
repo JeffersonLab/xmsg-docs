@@ -1,6 +1,4 @@
----
-title: Actors
----
+# Actors
 
 An xMsg *actor* is required to publish or subscribe messages.
 Messages are identified by *topics*,

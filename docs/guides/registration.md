@@ -1,6 +1,4 @@
----
-title: Registration/Discovery
----
+# Registration/Discovery
 
 If an actor is subscribed to a topic of interest,
 or it is periodically publishing messages,

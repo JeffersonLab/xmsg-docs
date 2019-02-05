@@ -1,3 +1,1 @@
----
-title: Python
----
+# Python Quickstart

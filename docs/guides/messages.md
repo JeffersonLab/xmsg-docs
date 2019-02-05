@@ -1,6 +1,4 @@
----
-title: Messages
----
+# Messages
 
 Actors communicate with others actors by publishing messages
 to given **topics**, or named channels.
@@ -13,7 +11,7 @@ All actors subscribed to the topic of a published message will receive it.
 
 A message is sent through the wire as a ZMQ message composed of three frames:
 
-![]({{ site.baseurl }}/assets/images/raw-message.png){: .align-center .zmqmsg }
+![](../assets/images/raw-message.png){: .align-center .zmqmsg }
 
 The **topic** frame is a 3-part string with the format:
 `<DOMAIN>:<SUBJECT>:<TYPE>`,

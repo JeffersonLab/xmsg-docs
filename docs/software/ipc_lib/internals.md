@@ -1,7 +1,4 @@
----
-title: IPC implementation details
-section: ipc_lib
----
+# IPC implementation details
 
 ## Code structure
 

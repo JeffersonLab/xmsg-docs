@@ -1,14 +1,9 @@
----
-layout: page
-use_nav: 1
-title: Reference
----
+# API Reference
 
 Links to the language specific automatically generated API reference documentation.
 
-* [Java API]({{ site.baseurl }}/api/java/current/)
+* [Java API](/xmsg/api/java/current/)
 
-* [C++ API]({{ site.baseurl }}/api/cpp/)
+* [C++ API](/xmsg/api/cpp/)
 
-* [Python API]({{ site.baseurl }}/api/python/)
-
+* [Python API](/xmsg/api/python/)

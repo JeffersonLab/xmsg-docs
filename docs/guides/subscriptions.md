@@ -1,6 +1,4 @@
----
-title: Subscriptions
----
+# Subscriptions
 
 To receive messages,
 an actor must **subscribe** to a **proxy** for a given **topic**.
@@ -55,12 +53,12 @@ In order to check that the subscription is running,
 the `pubSocket` will publish a control message to the proxy,
 with the following format:
 
-![]({{ site.baseurl }}/assets/images/ctrl-sub-req.png){: .align-center .zmqmsg }
+![](../assets/images/ctrl-sub-req.png){: .align-center .zmqmsg }
 
 If the request was successfully received,
 the proxy will publish back another control message, with this format:
 
-![]({{ site.baseurl }}/assets/images/ctrl-sub-ack.png){: .align-center .zmqmsg }
+![](../assets/images/ctrl-sub-ack.png){: .align-center .zmqmsg }
 
 This message should be received by the `subSocket` if everything is working.
 But if no message is received after 100 ms, the request will be published again.

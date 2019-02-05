@@ -1,3 +1,1 @@
----
-title: C++
----
+# C++ Quickstart

@@ -1,7 +1,4 @@
----
-title: Java
----
-
+# Java
 
 ### Creating messages
 

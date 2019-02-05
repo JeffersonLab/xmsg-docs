@@ -1,12 +1,8 @@
----
-layout: page
-use_nav: 1
-title: Documentation
----
+# Documentation
 
 Welcome to the documentation page for xMsg.
-For an overview of xMsg, read the [**Guides**]({{ site.baseurl }}/docs/guides/) section.
-Or visit [Quick Start]({{ site.baseurl }}/docs/quickstart/)
+For an overview of xMsg, read the [**Guides**](guides/) section.
+Or visit [Quick Start](quickstart/)
 for an introduction to writing actors in your preferred language.
 
 ## Supported Languages
@@ -19,21 +15,21 @@ for an introduction to writing actors in your preferred language.
 | [Reference][jr]   | [Reference][cr]   | [Reference][pr]   |
 {: .doc-lang-table }
 
-[jq]: {{ site.baseurl }}/docs/quickstart/java.html
-[jt]: {{ site.baseurl }}/docs/tutorials/java.html
-[je]: {{ site.baseurl }}/docs/examples/java.html
-[jr]: {{ site.baseurl }}/api/java/current/
+[jq]: quickstart/java.md
+[jt]: tutorials/java.md
+[je]: examples/java.md
+[jr]: /xmsg/api/java/current/
 
-[cq]: {{ site.baseurl }}/docs/quickstart/cpp.html
-[ct]: {{ site.baseurl }}/docs/tutorials/cpp.html
-[ce]: {{ site.baseurl }}/docs/examples/cpp.html
-[cr]: {{ site.baseurl }}/api/cpp/
+[cq]: quickstart/cpp.md
+[ct]: tutorials/cpp.md
+[ce]: examples/cpp.md
+[cr]: /xmsg/api/cpp/
 
-[pq]: {{ site.baseurl }}/docs/quickstart/python.html
-[pt]: {{ site.baseurl }}/docs/tutorials/python.html
-[pe]: {{ site.baseurl }}/docs/examples/python.html
-[pr]: {{ site.baseurl }}/api/python/
+[pq]: quickstart/python.md
+[pt]: tutorials/python.md
+[pe]: examples/python.md
+[pr]: /xmsg/api/python/
 
 ## Use cases
 
-* [IPC implementation with xMsg C++]({{ site.baseurl }}/docs/software/ipc_lib/usage.html)
+* [IPC implementation with xMsg C++](software/ipc_lib/usage.md)

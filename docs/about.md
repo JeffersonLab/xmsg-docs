@@ -1,7 +1,4 @@
----
-layout: page
-title: About xMsg
----
+# About xMsg
 
 ## License
 
