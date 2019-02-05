@@ -35,4 +35,4 @@ for an introduction to writing actors in your preferred language.
 
 ## Use cases
 
-* [IPC implementation with xMsg C++](software/ipc_lib/usage.md)
+* [IPC implementation with xMsg C++](software/ipc_lib.md)
