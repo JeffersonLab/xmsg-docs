@@ -5,11 +5,11 @@ a connection to an xMsg **proxy** must be obtained.
 Connections are managed by the xMsg actor,
 that keeps an internal **connection pool** to cache and reuse connections.
 
-{: .note }
-The global `ZContext` wrapper is not used to keep a list of created sockets.
-Thus, in order to destroy the context, all connections must be already
-closed and the actor destroyed too,
-otherwise the context will hang because some sockets are not closed yet.
+!!! note
+    The global `ZContext` wrapper is not used to keep a list of created sockets.
+    Thus, in order to destroy the context, all connections must be already
+    closed and the actor destroyed too,
+    otherwise the context will hang because some sockets are not closed yet.
 
 ## Connection fields
 

@@ -23,12 +23,10 @@ the following table shows which topics are matched:
 |`A:B:L`          |yes         |`E`              |no          |
 |`A:B:M`          |yes         |`M:R`            |no          |
 
-<p></p>
-
-{: .note }
-Regular expressions and wildcards are not supported. Only prefix matching.
-For example, trying to select just the subject of any domain, `*:B`,
-is not a valid subscription topic.
+!!! note
+    Regular expressions and wildcards are not supported. Only prefix matching.
+    For example, trying to select just the subject of any domain, `*:B`,
+    is not a valid subscription topic.
 
 ## Starting the subscription
 
@@ -65,11 +63,11 @@ But if no message is received after 100 ms, the request will be published again.
 After 10 unsuccessful attempts, an exception will be thrown
 because the subscription could not be started.
 
-{: .note }
-Since the subscription will be checked before starting the background thread,
-the `subscribe` method can block
-several hundred of milliseconds waiting for a control message
-to confirm that the subscription can receive messages.
+!!! note
+    Since the subscription will be checked before starting the background thread,
+    the `subscribe` method can block
+    several hundred of milliseconds waiting for a control message
+    to confirm that the subscription can receive messages.
 
 The **background thread** simply runs a continuos loop
 that periodically polls the `subSocket` for new ZMQ raw messages.
@@ -187,10 +185,10 @@ The background thread will stop receiving messages,
 the `subSocket` will be unsubscribed to the topic,
 and the connection will be closed.
 
-{: .note }
-Stopping the subscription will not remove or interrupt
-the callbacks of the subscription that are still pending or running
-in the internal threadpool.
+!!! note
+    Stopping the subscription will not remove or interrupt
+    the callbacks of the subscription that are still pending or running
+    in the internal threadpool.
 
 All active subscriptions will also be closed when the actor is destroyed.
 

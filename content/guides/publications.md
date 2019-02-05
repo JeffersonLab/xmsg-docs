@@ -9,23 +9,23 @@ void publish(xMsgConnection connection, xMsgMessage message) throws xMsgExceptio
 The message will be serialized into ZMQ frames, sent to the connected proxy,
 and delivered to all subscribers that match the topic of the message.
 
-{: .note }
-ZMQ does not send the raw message right away.
-It will be stored on a queue to be sent by a background I/O thread.
-If there are no subscribers for the topic,
-the message will discarded silently, and not put on the queue.
+!!! note
+    ZMQ does not send the raw message right away.
+    It will be stored on a queue to be sent by a background I/O thread.
+    If there are no subscribers for the topic,
+    the message will discarded silently, and not put on the queue.
 
 To send messages to a given proxy,
 a connection to the proxy must be obtained from the connection pool.
 Actors can publish messages to as many proxies as required
 by the topology of the application.
 
-{: .note }
-ZMQ "propagates" the subscriptions
-as an special message that is delivered to every connected PUB socket.
-Thus, it may take a while for a PUB socket to receive all subscriptions,
-and a publisher may silently drop the first messages
-due to not having the full information about subscriptions.
+!!! note
+    ZMQ "propagates" the subscriptions
+    as an special message that is delivered to every connected PUB socket.
+    Thus, it may take a while for a PUB socket to receive all subscriptions,
+    and a publisher may silently drop the first messages
+    due to not having the full information about subscriptions.
 
 For short publication tasks, the connection should be returned to the pool,
 to be reused by others threads:
